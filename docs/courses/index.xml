@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Course Information on MATP1061 SageMath programming towards problem solving</title>
-    <link>https://izayoi-ami.github.com/matp1061/courses/</link>
+    <link>http://matp1061.mathdb.org/courses/</link>
     <description>Recent content in Course Information on MATP1061 SageMath programming towards problem solving</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 21 Jul 2017 02:05:20 +0800</lastBuildDate>
     
-	<atom:link href="https://izayoi-ami.github.com/matp1061/courses/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://matp1061.mathdb.org/courses/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

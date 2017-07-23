@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Modular arithmetic on MATP1061 SageMath programming towards problem solving</title>
-    <link>https://izayoi-ami.github.com/matp1061/modular_arithmetic/</link>
+    <link>http://matp1061.mathdb.org/modular_arithmetic/</link>
     <description>Recent content in Modular arithmetic on MATP1061 SageMath programming towards problem solving</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 23 Jul 2017 23:41:30 +0800</lastBuildDate>
     
-	<atom:link href="https://izayoi-ami.github.com/matp1061/modular_arithmetic/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://matp1061.mathdb.org/modular_arithmetic/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
