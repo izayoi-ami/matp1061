@@ -1,0 +1,11 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "MATP1061 SageMath programming towards problem solving"
+theme = "hugo-theme-learn"
+
+
+
+[params]
+author = "Wu, Kai Chiu"
+#showVisitedLinks = false
+autoNav = true
