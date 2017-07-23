@@ -1,12 +1,12 @@
 +++
 date = "2017-07-21T16:50:56+08:00"
 icon = "<b>1. </b>"
-title = "Basics"
+title = "Getting Started"
 weight = 100
 
 +++
 
-### Day 1
+### Chapter 1
 
 # Getting Started 
 
