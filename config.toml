@@ -1,4 +1,4 @@
-baseURL = "http://matp1061.mathdb.org"
+baseURL = "https://matp1061.netlify.com"
 languageCode = "en-us"
 title = "MATP1061 SageMath programming towards problem solving"
 theme = "hugo-theme-learn"

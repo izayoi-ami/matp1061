@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on MATP1061 SageMath programming towards problem solving</title>
-    <link>http://matp1061.mathdb.org/categories/</link>
+    <link>https://matp1061.netlify.com/categories/</link>
     <description>Recent content in Categories on MATP1061 SageMath programming towards problem solving</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://matp1061.mathdb.org/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://matp1061.netlify.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
