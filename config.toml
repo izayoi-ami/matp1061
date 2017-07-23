@@ -2,7 +2,7 @@ baseURL = "https://izayoi-ami.github.com/matp1061"
 languageCode = "en-us"
 title = "MATP1061 SageMath programming towards problem solving"
 theme = "hugo-theme-learn"
-publishDir = "doc"
+publishDir = "docs"
 
 
 
