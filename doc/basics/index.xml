@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Getting Started on MATP1061 SageMath programming towards problem solving</title>
+    <link>https://izayoi-ami.github.com/matp1061/basics/</link>
+    <description>Recent content in Getting Started on MATP1061 SageMath programming towards problem solving</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 21 Jul 2017 16:50:56 +0800</lastBuildDate>
+    
+	<atom:link href="https://izayoi-ami.github.com/matp1061/basics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Introduction to Sage</title>
+      <link>https://izayoi-ami.github.com/matp1061/basics/sage_introduction/</link>
+      <pubDate>Sat, 22 Jul 2017 11:00:54 +0800</pubDate>
+      
+      <guid>https://izayoi-ami.github.com/matp1061/basics/sage_introduction/</guid>
+      <description>Sage (version 7.6) is currently a variant of Python 2. In future version 8, Sage will switch to Python 3.
+Sage Environment In this course, we will mainly focus on the usage of Sage Cloud Environment.
+Various platforms are available for Sage:
+ Local Installation (Using Jupyter notebook or IPython REPL) https://www.sagemath.org Sage Math Cell https://sagecell.sagemath.org Cocalc (Sage Math Cloud) https://cocalc.com  Sage Cell Environment A web environment for short code evaluation, which you may have already used in the selection test.</description>
+    </item>
+    
+    <item>
+      <title>Cocalc</title>
+      <link>https://izayoi-ami.github.com/matp1061/basics/sage_cloud/</link>
+      <pubDate>Sun, 23 Jul 2017 18:37:47 +0800</pubDate>
+      
+      <guid>https://izayoi-ami.github.com/matp1061/basics/sage_cloud/</guid>
+      <description>Cocalc Former named Sage Math Cloud, one can store all projects and perform computations on the cloud.
+Project creation  Project Creation    Create a project with name &amp;ldquo;Self computation&amp;rdquo;. This project is running on a free server, and hence may stop occasionally.  Sage worksheet Let&amp;rsquo;s do some arithmetic in Sage.
+ New file    Create a file name &amp;ldquo;1 - arithmetic&amp;rdquo; and select the type &amp;ldquo;Sage Worksheet&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Exact Arithmetic</title>
+      <link>https://izayoi-ami.github.com/matp1061/basics/sage_arithmetic/</link>
+      <pubDate>Sun, 23 Jul 2017 18:40:17 +0800</pubDate>
+      
+      <guid>https://izayoi-ami.github.com/matp1061/basics/sage_arithmetic/</guid>
+      <description>Try to type the following code in the edtior.
+Integer addition 2+5  Addition of fractions $$\frac{1}{3} + \frac{1}{6}$$
+1/3 + 1/6  You will see the answer 1/2 is shown as inline form.
+Math formatting Use the function show to enclose the expression for mathematical (LaTeX) display.
+show(1/3+1/6)  Symbolic addition In Sage, we can handle symbolic computation $$x+y+x+x+y$$.
+var(&amp;quot;x y&amp;quot;) # This line explicitly declares that x and y as symbolic variables.</description>
+    </item>
+    
+    <item>
+      <title>Variables</title>
+      <link>https://izayoi-ami.github.com/matp1061/basics/sage_variables/</link>
+      <pubDate>Sun, 23 Jul 2017 22:47:46 +0800</pubDate>
+      
+      <guid>https://izayoi-ami.github.com/matp1061/basics/sage_variables/</guid>
+      <description>Variables Sometimes, it is necessary to hold result of computation and to reuse it in future.
+For example, to compute \[(1+2+3+\cdots+10)+(1+2+3+\cdots+10)^2+(1+2+3+\cdots+10)^3\]
+ Store the result of $$(1+2+3+\cdots+10)$$ to a variable N. Compute the result of $$N+N^2+N^3$$.  N = 1+2+3+4+5+6+7+8+9+10 N + N^2 + N^3  We use the operator = for storing (assignment),
+i.e. to store the result of right-hand-side to the variable on the left.
+When an assignment is used, the result is suppressed.</description>
+    </item>
+    
+    <item>
+      <title>Lists</title>
+      <link>https://izayoi-ami.github.com/matp1061/basics/sage_lists/</link>
+      <pubDate>Sun, 23 Jul 2017 23:01:48 +0800</pubDate>
+      
+      <guid>https://izayoi-ami.github.com/matp1061/basics/sage_lists/</guid>
+      <description>Fibonacci sequence The Fibonacci sequence is: \[1,1,2,3,5,8,13,\cdots\]
+The $$n^{th}$$ term is usually denoted $$F_n$$.
+We use L = [1,1,2,3,5,8,13] to specify a list (zero-indexed sequence) and stores it to L.
+One can access the $$1^{st}$$ term with L[1].
+L = [1,1,2,3,5,8,13]  Zero-th index property In programming, list/sequence are usually indexed from zero.
+It is common to extend the sequence by the zero-th term, i.e. when $$n=0$$.
+Recall that $$F_{n+2} = F_{n+1} + F_n $$, if $$n=0$$, we have $$F_n = 0$$.</description>
+    </item>
+    
+  </channel>
+</rss>
