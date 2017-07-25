@@ -14,7 +14,7 @@ Try to type the following code in the edtior.
 ```
 ### Addition of fractions
 
-$$\frac{1}{3} + \frac{1}{6}$$
+$\frac{1}{3} + \frac{1}{6}$
 
 ```python
 1/3 + 1/6
@@ -32,13 +32,13 @@ show(1/3+1/6)
 
 ### Symbolic addition
 
-In Sage, we can handle symbolic computation $$x+y+x+x+y$$.
+In Sage, we can handle symbolic computation $x+y+x+x+y$.
 
 ```python
 var("x y") # This line explicitly declares that x and y as symbolic variables.
 x+y+x+x+y
 ```
-_Note that, the answer is displayed as `3*x+2*y` instead of $$3x+2y$$._
+_Note that, the answer is displayed as `3*x+2*y` instead of $3x+2y$._
 
 ### Last result
 
@@ -52,7 +52,7 @@ show(_)
 
 ### Multiplication
 
-To compute $$a\times b$$, we use `*`. 
+To compute $a\times b$, we use `*`. 
 
 
 ```python
@@ -79,7 +79,7 @@ These are the upper limit of in usual programming languages:
 
 ### Quotient and Modulus (Remainder)
 
-To evaluate the quotient and remainder when $$a$$ is divided by $$b$$, we use the operators `//` and `%`.
+To evaluate the quotient and remainder when $a$ is divided by $b$, we use the operators `//` and `%`.
 
 ```python
 50000 // 9  # This computes the quotient
@@ -88,7 +88,7 @@ To evaluate the quotient and remainder when $$a$$ is divided by $$b$$, we use th
 
 ### Solving equation
 
-To solve equation like $$3x+7 = 10$$, we use `solve`.
+To solve equation like $3x+7 = 10$, we use `solve`.
 
 ```python
 solve(3*x+7==10,x)
@@ -97,13 +97,13 @@ solve(3*x+7==10,x)
 
 ### Exercises
 
-1. Can you tell what is so special about the number $$142857$$?
-1. Find the largest prime number that is less than $$2025$$.
-1. If $$n$$ is an odd perfect square, find all possible values of the remainder when $$n$$ is divided by 4.
+1. Can you tell what is so special about the number $142857$?
+1. Find the largest prime number that is less than $2025$.
+1. If $n$ is an odd perfect square, find all possible values of the remainder when $n$ is divided by 4.
 
 ### Olympiad corner
 
-1. (PCIMC-2009) Let $$n$$ be a positive integer. It is known that 20090124 leaves a remainder of 4 when divided by $$n$$. Find the smallest possible value of $$n$$.
-1. (PCIMC-2009) What is the remainder when the 2009-digit $$1000\cdots 0001$$ is divided by 11?
-1. (PCIMC-2009) What is the remainder when the 2009-digit $$1000\cdots 0001$$ is divided by 7?
-1. (PCIMC-2010) Find the first four digits of $$20100123^2$$.
+1. (PCIMC-2009) Let $n$ be a positive integer. It is known that 20090124 leaves a remainder of 4 when divided by $n$. Find the smallest possible value of $n$.
+1. (PCIMC-2009) What is the remainder when the 2009-digit $1000\cdots 0001$ is divided by 11?
+1. (PCIMC-2009) What is the remainder when the 2009-digit $1000\cdots 0001$ is divided by 7?
+1. (PCIMC-2010) Find the first four digits of $20100123^2$.

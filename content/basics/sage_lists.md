@@ -2,7 +2,7 @@
 date = "2017-07-23T23:01:48+08:00"
 title = "Lists"
 toc = true
-weight = 50
+weight = 60
 
 +++
 
@@ -10,7 +10,7 @@ weight = 50
 
 The Fibonacci sequence is: \\[1,1,2,3,5,8,13,\cdots\\]
 
-The $$n^{th}$$ term is usually denoted $$F_n$$.
+The $n^{th}$ term is usually denoted $F_n$.
 
 We use `L = [1,1,2,3,5,8,13]` to specify a list (zero-indexed sequence) and stores it to `L`.
 
@@ -25,15 +25,51 @@ L = [1,1,2,3,5,8,13]
 
 In programming, list/sequence are usually indexed from zero.
 
-It is common to extend the sequence by the zero-th term, i.e. when $$n=0$$.
+It is common to extend the sequence by the zero-th term, i.e. when $n=0$.
 
-Recall that $$F\_{n+2} = F\_{n+1} + F_n $$, if $$n=0$$, we have $$F\_n = 0$$.
+Recall that $$F\_{n+2} = F\_{n+1} + F_n $$, by setting $n=0$, we have $F\_n = 0$.
 
 ```python
 F = [0,1,1,2,3,5,8,13]
 ```
 
 Thus, we can align the index in sage as usual sequence.
+
+### List access
+
+To access a single element of a list, we use the square bracket to enclose the index.
+
+Index can be negative (as in modular arithmetic).
+
+
+```python
+F = [0,1,1,2,3,5,8,13]
+
+F[6] # This is 8
+
+F[-1] # The rightmost element
+
+F[-2] # 8 again
+```
+
+We can use the **slice** format `[start:stop:step]` to take a sub-list.
+
+The range is specified with inclusive open and exclusive ending.
+
+
+```python
+F = [0,1,1,2,3,5,8,13]
+
+F[1:] # A sub-list with elements of F[1], F[2], ...  (i.e. dropping the 0-th term)
+
+F[:-1] # A sub-list without the last element
+
+F[1:3] # A list of just two elements of F[1], F[2]
+
+F[::2] # A list [0,1,3,8]
+
+```
+
 
 ### Common sequences
 
@@ -65,7 +101,7 @@ A list of numbers withint 1000 that is divisible by 2 or 3:
 
 `==` is used for equality comparison
 
-`!=` is used for comparison, i.e. $$\neq$$.
+`!=` is used for comparison, i.e. $\neq$.
 
 
 ### List operations

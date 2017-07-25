@@ -12,7 +12,7 @@ Sometimes, it is necessary to hold result of computation and to reuse it in futu
 
 For example, to compute \\[(1+2+3+\cdots+10)+(1+2+3+\cdots+10)^2+(1+2+3+\cdots+10)^3\\]
 
-1. Store the result of $$(1+2+3+\cdots+10)$$ to a variable `N`.
+1. Store the result of $(1+2+3+\cdots+10)$ to a variable `N`.
 1. Compute the result of $$N+N^2+N^3$$.
 
 ```python

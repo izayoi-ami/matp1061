@@ -23,7 +23,11 @@ An elementary name for the topic is clock arithmetic.
 
 ## Integer Modular Ring 
 
-One can answer the above question in sage with modular ring:
+A clock arithmetic system of $n$ elements is denoted $Z\_n$.
+
+It is called the integer modular ring of $n$ elements.
+
+One can answer the above three questions in sage with modular ring:
 
 ```python
 clock = Integers(24) # Clock arithmetic system with 24 numbers
@@ -33,10 +37,23 @@ T + 50 # The hour 50 hours later
 T + 2*13 # The hour after two single trips.
 ```
 
+*Another way to specify an element from a given modular arithmetic system is `Mod(number, base)`*
+
+```python
+T = Mod(11,24)  # The number 11 of the 24-hour clock.
+```
+
 
 ## Solving modular equation
+
+Mathematically, in question 4, we are solving an equation of the form:
+$$3 + 7x \equiv 12 \pmod{24}$$
+
+The above notation explicitly states that one is solving the equation using clock arithmetic.
+
 `solve_mod(equation, base, symbol)` returns all possible solutions.
 
 ```python
+var("x") # Make sure x is an unknown symbol
 solve_mod(3 + 7*x == 12, 24, x)
 ```
