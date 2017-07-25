@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 
     
-    <title>Variables</title>
+    <title>Functions</title>
     <link href="https://matp1061.netlify.com/css/nucleus.css" rel="stylesheet">
     <link href="https://matp1061.netlify.com/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://matp1061.netlify.com/css/hybrid.css" rel="stylesheet">
@@ -28,7 +28,7 @@
 
 
   </head>
-  <body class="" data-url="/basics/sage_variables/">
+  <body class="" data-url="/basics/sage_functions/">
     
     <nav id="sidebar">
   <div id="header-wrapper">
@@ -170,13 +170,13 @@
               </a>
             </li>
           
-            <li class="dd-item active" data-nav-id="/basics/sage_variables/">
+            <li class="dd-item " data-nav-id="/basics/sage_variables/">
               <a href="/basics/sage_variables/">
                 <span>Variables     </i></span>
               </a>
             </li>
           
-            <li class="dd-item " data-nav-id="/basics/sage_functions/">
+            <li class="dd-item active" data-nav-id="/basics/sage_functions/">
               <a href="/basics/sage_functions/">
                 <span>Functions     </i></span>
               </a>
@@ -324,7 +324,7 @@
                     
                   
                 
-                <span itemprop="title"> Variables</span>
+                <span itemprop="title"> Functions</span>
               </div>
               
                   <div class="progress">
@@ -333,10 +333,17 @@
 <ul>
 <li>
 <ul>
-<li>
+<li><a href="#example">Example</a></li>
+<li><a href="#sage-function">Sage function</a></li>
+<li><a href="#exercise">Exercise</a>
 <ul>
-<li><a href="#variables">Variables</a></li>
-<li><a href="#question">Question</a></li>
+<li><a href="#perimeters">Perimeters</a></li>
+<li><a href="#angle-between-hands">Angle between hands</a>
+<ul>
+<li><a href="#problem">Problem</a></li>
+<li><a href="#sample">Sample</a></li>
+<li><a href="#task">Task</a></li>
+</ul></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -351,43 +358,105 @@
             
               <div id="body-inner">
                 
-                <h1>Variables</h1>
+                <h1>Functions</h1>
                 
 
 
 
-<h3 id="variables">Variables</h3>
+<p>A function/mapping takes objects and returns objects.
+It is usually written in the form
+$$ F: A \to B $$
+Here, $F$ is the name of the function, $A$ is the possible input and $B$ is the possible output.</p>
 
-<p>Sometimes, it is necessary to hold result of computation and to reuse it in future.</p>
+<p>The mapping when stated explicitly is denoted $x \mapsto y$.</p>
 
-<p>For example, to compute \[(1+2+3+\cdots+10)+(1+2+3+\cdots+10)^2+(1+2+3+\cdots+10)^3\]</p>
+<h2 id="example">Example</h2>
 
-<ol>
-<li>Store the result of $(1+2+3+\cdots+10)$ to a variable <code>N</code>.</li>
-<li>Compute the result of $$N+N^2+N^3$$.</li>
-</ol>
+<p>The real $\sqrt{x}$ is a function that takes a number and returns a non-negative number whose square is the input.</p>
 
-<pre><code class="language-python">N = 1+2+3+4+5+6+7+8+9+10
-N + N^2 + N^3
+<p>$sqrt : Number \to Number$</p>
+
+<p>$Area$ : $Polygon \to Number$</p>
+
+<p>$angle\_between\_hands$ : $Time \to Angle$</p>
+
+<p>$is\_square$ : $Number \to Boolean$</p>
+
+<h2 id="sage-function">Sage function</h2>
+
+<p>The sage function <code>is_square</code> checks if a given number is a perfect square.</p>
+
+<pre><code class="language-python">is_square(100)  # This gives True
+is_square(3) # This gives False
 </code></pre>
 
-<p><strong>We use the operator <code>=</code> for storing (assignment)</strong>,</p>
+<pre><code class="language-python"># The below two lines define a sqr function.
+def sqr(x):
+    return x^2
 
-<p>i.e. to store the result of right-hand-side to the variable on the left.</p>
+sqr(10) # This will gives 100
+</code></pre>
 
-<p><em>When an assignment is used, the result is suppressed.</em></p>
+<pre><code class="language-python"># There are more than one ways to compute the last digit of a given integer.
 
-<h3 id="question">Question</h3>
+def last_digit(x):
+    return x%10
 
-<ol>
-<li>What is the result of $$x+x^2+x^3$$?</li>
-<li>What is the result of the following code?</li>
-</ol>
+def last_digit2(x):
+    return ZZ(x).digits()[0]
+</code></pre>
 
-<pre><code class="language-python">a = 10
-a = a^2
-a = a^2
-show(a)
+<pre><code class="language-python">def first_digit(x):
+    return ZZ(x).digits()[-1]
+</code></pre>
+
+<pre><code class="language-python">def digit_sum(x):
+    return sum(ZZ(x).digits())
+</code></pre>
+
+<pre><code class="language-python">def area_of_square(side):
+    return side*side
+
+def area_of_parallelogram(base,height):
+    return base*height
+</code></pre>
+
+<h2 id="exercise">Exercise</h2>
+
+<h3 id="perimeters">Perimeters</h3>
+
+<p>File: <code>Lessons 2/perimeters.sagews</code></p>
+
+<h3 id="angle-between-hands">Angle between hands</h3>
+
+<h4 id="problem">Problem</h4>
+
+<pre><code>Input: A given time t (a pair of number that represents hour and minute).
+
+Output: The angle between them in degree.
+
+</code></pre>
+
+<h4 id="sample">Sample</h4>
+
+<p>Input: (03,00)</p>
+
+<p>Output: 90$^{\circ}$</p>
+
+<h4 id="task">Task</h4>
+
+<p>Please complete the below functon to compute the required angle.</p>
+
+<p>File: <code>Lesson 2/angle_between_hands.sagews</code></p>
+
+<pre><code class="language-python">def angle_between_hands(t):
+    hour = t[0]
+    minute = t[1]
+    angle_of_minute = t[1] * 6
+    # Complete below
+    angle_of_hour = 0 # C
+    ans = abs(angle_of_minute - angle_of_hour)
+    return ans
 </code></pre>
 
 
@@ -472,18 +541,18 @@ show(a)
           
         
           
-            
-              
-                <a class="nav nav-prev" href="/basics/sage_arithmetic/"> <i class="fa fa-chevron-left"></i></a>
-              
-            
-            
-              
-                <a class="nav nav-next" href="/basics/sage_functions/" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
-              
-            
-          
         
+          
+            
+              
+                <a class="nav nav-prev" href="/basics/sage_variables/"> <i class="fa fa-chevron-left"></i></a>
+              
+            
+            
+              
+                <a class="nav nav-next" href="/basics/sage_lists/" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+              
+            
           
         
           

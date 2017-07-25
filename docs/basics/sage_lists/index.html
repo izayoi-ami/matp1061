@@ -78,7 +78,21 @@
             
           
         
+          
+          
+            
+          
         
+          
+          
+            
+          
+        
+        
+        
+          
+        
+          
         
           
         
@@ -162,6 +176,12 @@
               </a>
             </li>
           
+            <li class="dd-item " data-nav-id="/basics/sage_functions/">
+              <a href="/basics/sage_functions/">
+                <span>Functions     </i></span>
+              </a>
+            </li>
+          
             <li class="dd-item active" data-nav-id="/basics/sage_lists/">
               <a href="/basics/sage_lists/">
                 <span>Lists     </i></span>
@@ -192,6 +212,74 @@
               <b>2. </b>
             
              Modular arithmetic
+            
+           </span>
+        </a>
+        
+        <ul>
+          
+            <li class="dd-item " data-nav-id="/modular_arithmetic/divisibility/">
+              <a href="/modular_arithmetic/divisibility/">
+                <span>Divisibility     </i></span>
+              </a>
+            </li>
+          
+            <li class="dd-item " data-nav-id="/modular_arithmetic/euclidean_algorithm/">
+              <a href="/modular_arithmetic/euclidean_algorithm/">
+                <span>Euclidean algorithm     </i></span>
+              </a>
+            </li>
+          
+        </ul>
+        
+      </li>
+      
+      
+      
+
+      
+      
+      
+        
+          
+        
+      
+      
+      
+
+      <li class="dd-item  " data-nav-id="/sequences/">
+        <a href="/sequences/">
+          <span>
+            
+              <b>3. </b>
+            
+             Sequences
+            
+           </span>
+        </a>
+        
+      </li>
+      
+      
+      
+
+      
+      
+      
+        
+          
+        
+      
+      
+      
+
+      <li class="dd-item  " data-nav-id="/projects/">
+        <a href="/projects/">
+          <span>
+            
+              <b></b>
+            
+             Projects
             
            </span>
         </a>
@@ -249,6 +337,7 @@
 <ul>
 <li><a href="#fibonacci-sequence">Fibonacci sequence</a></li>
 <li><a href="#zero-th-index-property">Zero-th index property</a></li>
+<li><a href="#list-access">List access</a></li>
 <li><a href="#common-sequences">Common sequences</a></li>
 <li><a href="#list-comprehension">List comprehension</a></li>
 <li><a href="#list-filtering">List filtering</a></li>
@@ -277,11 +366,11 @@
 
 <p>The Fibonacci sequence is: \[1,1,2,3,5,8,13,\cdots\]</p>
 
-<p>The $$n^{th}$$ term is usually denoted $$F_n$$.</p>
+<p>The $n^{th}$ term is usually denoted $F_n$.</p>
 
 <p>We use <code>L = [1,1,2,3,5,8,13]</code> to specify a list (zero-indexed sequence) and stores it to <code>L</code>.</p>
 
-<p>One can access the $$1^{st}$$ term with <code>L[1]</code>.</p>
+<p>One can access the $1^{st}$ term with <code>L[1]</code>.</p>
 
 <pre><code class="language-python">L = [1,1,2,3,5,8,13]
 </code></pre>
@@ -290,14 +379,45 @@
 
 <p>In programming, list/sequence are usually indexed from zero.</p>
 
-<p>It is common to extend the sequence by the zero-th term, i.e. when $$n=0$$.</p>
+<p>It is common to extend the sequence by the zero-th term, i.e. when $n=0$.</p>
 
-<p>Recall that $$F_{n+2} = F_{n+1} + F_n $$, if $$n=0$$, we have $$F_n = 0$$.</p>
+<p>Recall that $$F_{n+2} = F_{n+1} + F_n $$, by setting $n=0$, we have $F_n = 0$.</p>
 
 <pre><code class="language-python">F = [0,1,1,2,3,5,8,13]
 </code></pre>
 
 <p>Thus, we can align the index in sage as usual sequence.</p>
+
+<h3 id="list-access">List access</h3>
+
+<p>To access a single element of a list, we use the square bracket to enclose the index.</p>
+
+<p>Index can be negative (as in modular arithmetic).</p>
+
+<pre><code class="language-python">F = [0,1,1,2,3,5,8,13]
+
+F[6] # This is 8
+
+F[-1] # The rightmost element
+
+F[-2] # 8 again
+</code></pre>
+
+<p>We can use the <strong>slice</strong> format <code>[start:stop:step]</code> to take a sub-list.</p>
+
+<p>The range is specified with inclusive open and exclusive ending.</p>
+
+<pre><code class="language-python">F = [0,1,1,2,3,5,8,13]
+
+F[1:] # A sub-list with elements of F[1], F[2], ...  (i.e. dropping the 0-th term)
+
+F[:-1] # A sub-list without the last element
+
+F[1:3] # A list of just two elements of F[1], F[2]
+
+F[::2] # A list [0,1,3,8]
+
+</code></pre>
 
 <h3 id="common-sequences">Common sequences</h3>
 
@@ -325,7 +445,7 @@
 
 <p><code>==</code> is used for equality comparison</p>
 
-<p><code>!=</code> is used for comparison, i.e. $$\neq$$.</p>
+<p><code>!=</code> is used for comparison, i.e. $\neq$.</p>
 
 <h3 id="list-operations">List operations</h3>
 
@@ -390,6 +510,10 @@
       
         
       
+        
+      
+        
+      
       
     
     
@@ -412,6 +536,22 @@
         
       
         
+      
+        
+      
+    
+      
+        
+      
+      
+        
+      
+        
+      
+    
+      
+        
+      
       
     
       
@@ -438,9 +578,11 @@
           
         
           
+        
+          
             
               
-                <a class="nav nav-prev" href="/basics/sage_variables/"> <i class="fa fa-chevron-left"></i></a>
+                <a class="nav nav-prev" href="/basics/sage_functions/"> <i class="fa fa-chevron-left"></i></a>
               
             
             
@@ -448,6 +590,14 @@
                 <a class="nav nav-next" href="/modular_arithmetic/" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
               
             
+          
+        
+          
+        
+          
+        
+          
+        
           
         
           
@@ -477,7 +627,8 @@
     document.body,
     {
       delimiters:[
-        {left: "$$", right: "$$", display: false },
+        {left: "$$", right: "$$", display: true },
+        {left: "$", right: "$", display: false },
         {left: "\\[", right: "\\]", display: true },
       ]
     }

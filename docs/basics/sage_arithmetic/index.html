@@ -78,7 +78,21 @@
             
           
         
+          
+          
+            
+          
         
+          
+          
+            
+          
+        
+        
+        
+          
+        
+          
         
           
         
@@ -162,6 +176,12 @@
               </a>
             </li>
           
+            <li class="dd-item " data-nav-id="/basics/sage_functions/">
+              <a href="/basics/sage_functions/">
+                <span>Functions     </i></span>
+              </a>
+            </li>
+          
             <li class="dd-item " data-nav-id="/basics/sage_lists/">
               <a href="/basics/sage_lists/">
                 <span>Lists     </i></span>
@@ -192,6 +212,74 @@
               <b>2. </b>
             
              Modular arithmetic
+            
+           </span>
+        </a>
+        
+        <ul>
+          
+            <li class="dd-item " data-nav-id="/modular_arithmetic/divisibility/">
+              <a href="/modular_arithmetic/divisibility/">
+                <span>Divisibility     </i></span>
+              </a>
+            </li>
+          
+            <li class="dd-item " data-nav-id="/modular_arithmetic/euclidean_algorithm/">
+              <a href="/modular_arithmetic/euclidean_algorithm/">
+                <span>Euclidean algorithm     </i></span>
+              </a>
+            </li>
+          
+        </ul>
+        
+      </li>
+      
+      
+      
+
+      
+      
+      
+        
+          
+        
+      
+      
+      
+
+      <li class="dd-item  " data-nav-id="/sequences/">
+        <a href="/sequences/">
+          <span>
+            
+              <b>3. </b>
+            
+             Sequences
+            
+           </span>
+        </a>
+        
+      </li>
+      
+      
+      
+
+      
+      
+      
+        
+          
+        
+      
+      
+      
+
+      <li class="dd-item  " data-nav-id="/projects/">
+        <a href="/projects/">
+          <span>
+            
+              <b></b>
+            
+             Projects
             
            </span>
         </a>
@@ -286,7 +374,7 @@
 
 <h3 id="addition-of-fractions">Addition of fractions</h3>
 
-<p>$$\frac{1}{3} + \frac{1}{6}$$</p>
+<p>$\frac{1}{3} + \frac{1}{6}$</p>
 
 <pre><code class="language-python">1/3 + 1/6
 </code></pre>
@@ -302,13 +390,13 @@
 
 <h3 id="symbolic-addition">Symbolic addition</h3>
 
-<p>In Sage, we can handle symbolic computation $$x+y+x+x+y$$.</p>
+<p>In Sage, we can handle symbolic computation $x+y+x+x+y$.</p>
 
 <pre><code class="language-python">var(&quot;x y&quot;) # This line explicitly declares that x and y as symbolic variables.
 x+y+x+x+y
 </code></pre>
 
-<p><em>Note that, the answer is displayed as <code>3*x+2*y</code> instead of $$3x+2y$$.</em></p>
+<p><em>Note that, the answer is displayed as <code>3*x+2*y</code> instead of $3x+2y$.</em></p>
 
 <h3 id="last-result">Last result</h3>
 
@@ -321,7 +409,7 @@ x+y+x+x+y
 
 <h3 id="multiplication">Multiplication</h3>
 
-<p>To compute $$a\times b$$, we use <code>*</code>.</p>
+<p>To compute $a\times b$, we use <code>*</code>.</p>
 
 <pre><code class="language-python">142857*7
 </code></pre>
@@ -343,7 +431,7 @@ x+y+x+x+y
 
 <h3 id="quotient-and-modulus-remainder">Quotient and Modulus (Remainder)</h3>
 
-<p>To evaluate the quotient and remainder when $$a$$ is divided by $$b$$, we use the operators <code>//</code> and <code>%</code>.</p>
+<p>To evaluate the quotient and remainder when $a$ is divided by $b$, we use the operators <code>//</code> and <code>%</code>.</p>
 
 <pre><code class="language-python">50000 // 9  # This computes the quotient
 50000 % 9   # This computes the modulus (remainder)
@@ -351,7 +439,7 @@ x+y+x+x+y
 
 <h3 id="solving-equation">Solving equation</h3>
 
-<p>To solve equation like $$3x+7 = 10$$, we use <code>solve</code>.</p>
+<p>To solve equation like $3x+7 = 10$, we use <code>solve</code>.</p>
 
 <pre><code class="language-python">solve(3*x+7==10,x)
 </code></pre>
@@ -359,18 +447,18 @@ x+y+x+x+y
 <h3 id="exercises">Exercises</h3>
 
 <ol>
-<li>Can you tell what is so special about the number $$142857$$?</li>
-<li>Find the largest prime number that is less than $$2025$$.</li>
-<li>If $$n$$ is an odd perfect square, find all possible values of the remainder when $$n$$ is divided by 4.</li>
+<li>Can you tell what is so special about the number $142857$?</li>
+<li>Find the largest prime number that is less than $2025$.</li>
+<li>If $n$ is an odd perfect square, find all possible values of the remainder when $n$ is divided by 4.</li>
 </ol>
 
 <h3 id="olympiad-corner">Olympiad corner</h3>
 
 <ol>
-<li>(PCIMC-2009) Let $$n$$ be a positive integer. It is known that 20090124 leaves a remainder of 4 when divided by $$n$$. Find the smallest possible value of $$n$$.</li>
-<li>(PCIMC-2009) What is the remainder when the 2009-digit $$1000\cdots 0001$$ is divided by 11?</li>
-<li>(PCIMC-2009) What is the remainder when the 2009-digit $$1000\cdots 0001$$ is divided by 7?</li>
-<li>(PCIMC-2010) Find the first four digits of $$20100123^2$$.</li>
+<li>(PCIMC-2009) Let $n$ be a positive integer. It is known that 20090124 leaves a remainder of 4 when divided by $n$. Find the smallest possible value of $n$.</li>
+<li>(PCIMC-2009) What is the remainder when the 2009-digit $1000\cdots 0001$ is divided by 11?</li>
+<li>(PCIMC-2009) What is the remainder when the 2009-digit $1000\cdots 0001$ is divided by 7?</li>
+<li>(PCIMC-2010) Find the first four digits of $20100123^2$.</li>
 </ol>
 
 
@@ -389,6 +477,10 @@ x+y+x+x+y
       
         
       
+        
+      
+        
+      
       
     
     
@@ -411,6 +503,22 @@ x+y+x+x+y
         
       
         
+      
+        
+      
+    
+      
+        
+      
+      
+        
+      
+        
+      
+    
+      
+        
+      
       
     
       
@@ -451,6 +559,16 @@ x+y+x+x+y
         
           
         
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
         
         
         
@@ -476,7 +594,8 @@ x+y+x+x+y
     document.body,
     {
       delimiters:[
-        {left: "$$", right: "$$", display: false },
+        {left: "$$", right: "$$", display: true },
+        {left: "$", right: "$", display: false },
         {left: "\\[", right: "\\]", display: true },
       ]
     }

@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 
     
-    <title>Variables</title>
+    <title>Euclidean algorithm</title>
     <link href="https://matp1061.netlify.com/css/nucleus.css" rel="stylesheet">
     <link href="https://matp1061.netlify.com/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://matp1061.netlify.com/css/hybrid.css" rel="stylesheet">
@@ -28,7 +28,7 @@
 
 
   </head>
-  <body class="" data-url="/basics/sage_variables/">
+  <body class="" data-url="/modular_arithmetic/euclidean_algorithm/">
     
     <nav id="sidebar">
   <div id="header-wrapper">
@@ -139,7 +139,7 @@
       
       
 
-      <li class="dd-item  parent" data-nav-id="/basics/">
+      <li class="dd-item  " data-nav-id="/basics/">
         <a href="/basics/">
           <span>
             
@@ -170,7 +170,7 @@
               </a>
             </li>
           
-            <li class="dd-item active" data-nav-id="/basics/sage_variables/">
+            <li class="dd-item " data-nav-id="/basics/sage_variables/">
               <a href="/basics/sage_variables/">
                 <span>Variables     </i></span>
               </a>
@@ -205,7 +205,7 @@
       
       
 
-      <li class="dd-item  " data-nav-id="/modular_arithmetic/">
+      <li class="dd-item  parent" data-nav-id="/modular_arithmetic/">
         <a href="/modular_arithmetic/">
           <span>
             
@@ -224,7 +224,7 @@
               </a>
             </li>
           
-            <li class="dd-item " data-nav-id="/modular_arithmetic/euclidean_algorithm/">
+            <li class="dd-item active" data-nav-id="/modular_arithmetic/euclidean_algorithm/">
               <a href="/modular_arithmetic/euclidean_algorithm/">
                 <span>Euclidean algorithm     </i></span>
               </a>
@@ -320,11 +320,11 @@
                   
                     
                     
-                <a href="/basics/" itemprop="url"><span itemprop="title">Getting Started</span></a> <i class="fa fa-angle-right"></i>
+                <a href="/modular_arithmetic/" itemprop="url"><span itemprop="title">Modular arithmetic</span></a> <i class="fa fa-angle-right"></i>
                     
                   
                 
-                <span itemprop="title"> Variables</span>
+                <span itemprop="title"> Euclidean algorithm</span>
               </div>
               
                   <div class="progress">
@@ -333,10 +333,14 @@
 <ul>
 <li>
 <ul>
-<li>
+<li><a href="#property">Property</a>
 <ul>
-<li><a href="#variables">Variables</a></li>
-<li><a href="#question">Question</a></li>
+<li><a href="#extended-euclidean-algorithm">Extended Euclidean algorithm</a></li>
+<li><a href="#modular-linear-equation">Modular linear equation</a></li>
+</ul></li>
+<li><a href="#task">Task</a>
+<ul>
+<li><a href="#further-readings">Further readings</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -351,44 +355,99 @@
             
               <div id="body-inner">
                 
-                <h1>Variables</h1>
+                <h1>Euclidean algorithm</h1>
                 
 
 
 
-<h3 id="variables">Variables</h3>
+<h2 id="property">Property</h2>
 
-<p>Sometimes, it is necessary to hold result of computation and to reuse it in future.</p>
+<p>Greatest common divisor (gcd) and lowest common factor (lcm) of numbers $a$ and $b$ are related by</p>
 
-<p>For example, to compute \[(1+2+3+\cdots+10)+(1+2+3+\cdots+10)^2+(1+2+3+\cdots+10)^3\]</p>
+<p>$$a\times b= \mathrm{gcd}(a,b) \times \mathrm{\ell cm}(a,b)$$</p>
 
-<ol>
-<li>Store the result of $(1+2+3+\cdots+10)$ to a variable <code>N</code>.</li>
-<li>Compute the result of $$N+N^2+N^3$$.</li>
-</ol>
+<hr />
 
-<pre><code class="language-python">N = 1+2+3+4+5+6+7+8+9+10
-N + N^2 + N^3
+<p>The gcd function (which takes two inputs) has the following properties:</p>
+
+<p>$$\mathrm{gcd}(a,b) = \mathrm{gcd}(b,a)$$
+$$\mathrm{gcd}(a,b) = \mathrm{gcd}(a,b-a)$$
+$$\mathrm{gcd}(a,0) = a $$</p>
+
+<p>By repeated application of the second rule, we have</p>
+
+<p>$$\mathrm{gcd}(a,b) = \mathrm{gcd}(a,b \bmod a)$$</p>
+
+<hr />
+
+<p>Example</p>
+
+<p>$$\mathrm{gcd}(300,144) = \mathrm{gcd}(144,300 - 2\times 144) = \mathrm{gcd}(144,12) = \mathrm{gcd}(12, 144 - 12\times12) = 12 $$</p>
+
+<p>Another way to express the above computation is</p>
+
+<p>$$\mathrm{gcd}(300,144) = \mathrm{gcd}(144, 300 \bmod 144) = \mathrm{gcd}(144,12) = \mathrm{gcd}(12, 144 \bmod 12) = 12 $$</p>
+
+<pre><code class="language-python">gcd(300,144)  # Take two numbers as input
+
+gcd([300,144]) # Take a single input which is a list of two numbers
+
+lcm(300,144)
+
+lcm([300,144])
 </code></pre>
 
-<p><strong>We use the operator <code>=</code> for storing (assignment)</strong>,</p>
+<p>The list version is useful when more than two numbers are considered.</p>
 
-<p>i.e. to store the result of right-hand-side to the variable on the left.</p>
+<hr />
 
-<p><em>When an assignment is used, the result is suppressed.</em></p>
+<h3 id="extended-euclidean-algorithm">Extended Euclidean algorithm</h3>
 
-<h3 id="question">Question</h3>
+<p>It turns out the algorithm produces a pair of integers $m,n$ such that $$300m + 144n = 12$$</p>
+
+<p>It is always true that one can get a pair of integers $m,n$ such that $$ma + nb = \mathrm{gcd}(a,b)$$</p>
+
+<p><em>Do you still remember the coin exchange problem in the test? This is the key to solve it.</em></p>
+
+<h3 id="modular-linear-equation">Modular linear equation</h3>
+
+<p>To solve the equation $3x+3 = 4 \pmod{13}$ by hand as usual to get $ 3x  = 1 \pmod{13} $.</p>
+
+<p>By trial and error, we know that $3\times9=27=1\pmod{13}$.</p>
+
+<p>Hence, $x=9 \pmod{13}$ is a possible solution.</p>
+
+<hr />
+
+<p>Alternatively, note that $\mathrm{gcd}(3,13) = 1$. We can find a pair $m,n$ such that $$3m+13n = 1$$</p>
+
+<p>The pair and the gcd can be computed at the same time in sage:</p>
+
+<pre><code class="language-python">d,m,n = xgcd(1,3,13)
+</code></pre>
+
+<p>Giving $$(-4)\times 3 + (1) \times 13 = 1$$</p>
+
+<p>by taking modulo 13, we have $$(-4)\times 3 = 1 \pmod{13}$$</p>
+
+<h2 id="task">Task</h2>
 
 <ol>
-<li>What is the result of $$x+x^2+x^3$$?</li>
-<li>What is the result of the following code?</li>
+<li>In addition to the pair $(-4,1)$, can you find some other pairs?</li>
+<li>Finish ProjectEuler Problem 5 (<a href="https://projecteuler.net/problem=5">https://projecteuler.net/problem=5</a>).</li>
 </ol>
 
-<pre><code class="language-python">a = 10
-a = a^2
-a = a^2
-show(a)
-</code></pre>
+<h3 id="further-readings">Further readings</h3>
+
+<ul>
+<li>Postage stamp problem:
+
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Postage_stamp_problem">https://en.wikipedia.org/wiki/Postage_stamp_problem</a></li>
+<li><a href="https://brilliant.org/wiki/postage-stamp-problem-chicken-mcnugget-theorem/">https://brilliant.org/wiki/postage-stamp-problem-chicken-mcnugget-theorem/</a></li>
+</ul></li>
+<li>Tabular method to compute the pair and gcd: <a href="https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm#Example">https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm#Example</a></li>
+</ul>
 
 
       
@@ -472,26 +531,26 @@ show(a)
           
         
           
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
             
               
-                <a class="nav nav-prev" href="/basics/sage_arithmetic/"> <i class="fa fa-chevron-left"></i></a>
+                <a class="nav nav-prev" href="/modular_arithmetic/divisibility/"> <i class="fa fa-chevron-left"></i></a>
               
             
             
               
-                <a class="nav nav-next" href="/basics/sage_functions/" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+                <a class="nav nav-next" href="/sequences/" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
               
             
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
           
         
           

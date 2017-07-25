@@ -14,7 +14,7 @@ The $n^{th}$ term is usually denoted $F_n$.
 
 We use `L = [1,1,2,3,5,8,13]` to specify a list (zero-indexed sequence) and stores it to `L`.
 
-One can access the $$1^{st}$$ term with `L[1]`.
+One can access the $1^{st}$ term with `L[1]`.
 
 ```python
 L = [1,1,2,3,5,8,13]

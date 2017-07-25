@@ -11,5 +11,34 @@
 	<atom:link href="https://matp1061.netlify.com/modular_arithmetic/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Divisibility</title>
+      <link>https://matp1061.netlify.com/modular_arithmetic/divisibility/</link>
+      <pubDate>Tue, 25 Jul 2017 16:19:12 +0800</pubDate>
+      
+      <guid>https://matp1061.netlify.com/modular_arithmetic/divisibility/</guid>
+      <description>Divisibility for 7, 11 and 13 We have the alternating 3-digit sum for 7, 11 and 13:
+To find $210600900 \bmod{} 7$, we can proceed by: $(900-600+210) \bmod{} 7$.
+The idea behind is
+$$210600900 =210\times1000^{2}+600\times1000+900$$ $$1 =1$$ $$1000 =\left(1001\right)-1$$ $$1000^{2} =1001M+1$$ where $M$ is some integer, hence $1000^2$ is the sum of $1$ and a multiple of $1001$.
+Since $7 \times 11 \times 13 = 1001 = 1000 + 1 = 10^3 + 1$, any multiple of $1001$ is automatically that of $7$, $11$ and $13$.</description>
+    </item>
+    
+    <item>
+      <title>Euclidean algorithm</title>
+      <link>https://matp1061.netlify.com/modular_arithmetic/euclidean_algorithm/</link>
+      <pubDate>Tue, 25 Jul 2017 15:54:17 +0800</pubDate>
+      
+      <guid>https://matp1061.netlify.com/modular_arithmetic/euclidean_algorithm/</guid>
+      <description>Property Greatest common divisor (gcd) and lowest common factor (lcm) of numbers $a$ and $b$ are related by
+$$a\times b= \mathrm{gcd}(a,b) \times \mathrm{\ell cm}(a,b)$$
+The gcd function (which takes two inputs) has the following properties:
+$$\mathrm{gcd}(a,b) = \mathrm{gcd}(b,a)$$ $$\mathrm{gcd}(a,b) = \mathrm{gcd}(a,b-a)$$ $$\mathrm{gcd}(a,0) = a $$
+By repeated application of the second rule, we have
+$$\mathrm{gcd}(a,b) = \mathrm{gcd}(a,b \bmod a)$$
+Example
+$$\mathrm{gcd}(300,144) = \mathrm{gcd}(144,300 - 2\times 144) = \mathrm{gcd}(144,12) = \mathrm{gcd}(12, 144 - 12\times12) = 12 $$</description>
+    </item>
+    
   </channel>
 </rss>

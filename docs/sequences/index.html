@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" class="js csstransforms3d">
   <head>
@@ -10,7 +11,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 
     
-    <title>Variables</title>
+    <title>Sequences</title>
     <link href="https://matp1061.netlify.com/css/nucleus.css" rel="stylesheet">
     <link href="https://matp1061.netlify.com/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://matp1061.netlify.com/css/hybrid.css" rel="stylesheet">
@@ -28,7 +29,7 @@
 
 
   </head>
-  <body class="" data-url="/basics/sage_variables/">
+  <body class="" data-url="/sequences/">
     
     <nav id="sidebar">
   <div id="header-wrapper">
@@ -139,7 +140,7 @@
       
       
 
-      <li class="dd-item  parent" data-nav-id="/basics/">
+      <li class="dd-item  " data-nav-id="/basics/">
         <a href="/basics/">
           <span>
             
@@ -170,7 +171,7 @@
               </a>
             </li>
           
-            <li class="dd-item active" data-nav-id="/basics/sage_variables/">
+            <li class="dd-item " data-nav-id="/basics/sage_variables/">
               <a href="/basics/sage_variables/">
                 <span>Variables     </i></span>
               </a>
@@ -247,7 +248,7 @@
       
       
 
-      <li class="dd-item  " data-nav-id="/sequences/">
+      <li class="dd-item active parent" data-nav-id="/sequences/">
         <a href="/sequences/">
           <span>
             
@@ -312,86 +313,50 @@
                       </a>
                   </span>
                 
-                <span id="toc-menu"><a href=""><i class="fa fa-list-alt"></i></a></span>
-                
                 
                   
                   
                   
                     
                     
-                <a href="/basics/" itemprop="url"><span itemprop="title">Getting Started</span></a> <i class="fa fa-angle-right"></i>
-                    
                   
                 
-                <span itemprop="title"> Variables</span>
+                <span itemprop="title"> Sequences</span>
               </div>
-              
-                  <div class="progress">
-    <div class="wrapper">
-<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#variables">Variables</a></li>
-<li><a href="#question">Question</a></li>
-</ul></li>
-</ul></li>
-</ul>
-</nav>
-    </div>
-</div>
-
               
             </div>
 
             </div>
             
+              <div id="chapter">
+            
               <div id="body-inner">
                 
-                <h1>Variables</h1>
-                
 
 
 
-<h3 id="variables">Variables</h3>
+<h1 id="sequences">Sequences</h1>
 
-<p>Sometimes, it is necessary to hold result of computation and to reuse it in future.</p>
+<h2 id="look-and-say-sequence">Look-and-say sequence</h2>
 
-<p>For example, to compute \[(1+2+3+\cdots+10)+(1+2+3+\cdots+10)^2+(1+2+3+\cdots+10)^3\]</p>
+<p>$1,11,21,1211,111221,\cdots$</p>
 
-<ol>
-<li>Store the result of $(1+2+3+\cdots+10)$ to a variable <code>N</code>.</li>
-<li>Compute the result of $$N+N^2+N^3$$.</li>
-</ol>
+<p>Don&rsquo;t think too much. Just read and count it in English.</p>
 
-<pre><code class="language-python">N = 1+2+3+4+5+6+7+8+9+10
-N + N^2 + N^3
-</code></pre>
+<h2 id="fibonacci-sequence">Fibonacci sequence</h2>
 
-<p><strong>We use the operator <code>=</code> for storing (assignment)</strong>,</p>
+<p>The Fibonacci sequence is given by</p>
 
-<p>i.e. to store the result of right-hand-side to the variable on the left.</p>
+<p>$$F_0=0$$
+$$F_1=1$$
+$$F_{n+2}=F_{n+1}+F_n$$</p>
 
-<p><em>When an assignment is used, the result is suppressed.</em></p>
-
-<h3 id="question">Question</h3>
-
-<ol>
-<li>What is the result of $$x+x^2+x^3$$?</li>
-<li>What is the result of the following code?</li>
-</ol>
-
-<pre><code class="language-python">a = 10
-a = a^2
-a = a^2
-show(a)
-</code></pre>
+<p>File: <code>Material/fibonacci.sagews</code></p>
 
 
       
+      
+        </div> 
       
       </div>
     </div>
@@ -472,28 +437,28 @@ show(a)
           
         
           
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
             
               
-                <a class="nav nav-prev" href="/basics/sage_arithmetic/"> <i class="fa fa-chevron-left"></i></a>
+                <a class="nav nav-prev" href="/modular_arithmetic/euclidean_algorithm/"> <i class="fa fa-chevron-left"></i></a>
               
             
             
               
-                <a class="nav nav-next" href="/basics/sage_functions/" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+                <a class="nav nav-next" href="/projects/" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
               
             
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
           
         
           
@@ -534,4 +499,5 @@ show(a)
 
   </body>
 </html>
+
 

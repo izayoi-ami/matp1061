@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" class="js csstransforms3d">
   <head>
@@ -10,7 +11,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 
     
-    <title>Variables</title>
+    <title>Projects</title>
     <link href="https://matp1061.netlify.com/css/nucleus.css" rel="stylesheet">
     <link href="https://matp1061.netlify.com/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://matp1061.netlify.com/css/hybrid.css" rel="stylesheet">
@@ -28,7 +29,7 @@
 
 
   </head>
-  <body class="" data-url="/basics/sage_variables/">
+  <body class="" data-url="/projects/">
     
     <nav id="sidebar">
   <div id="header-wrapper">
@@ -139,7 +140,7 @@
       
       
 
-      <li class="dd-item  parent" data-nav-id="/basics/">
+      <li class="dd-item  " data-nav-id="/basics/">
         <a href="/basics/">
           <span>
             
@@ -170,7 +171,7 @@
               </a>
             </li>
           
-            <li class="dd-item active" data-nav-id="/basics/sage_variables/">
+            <li class="dd-item " data-nav-id="/basics/sage_variables/">
               <a href="/basics/sage_variables/">
                 <span>Variables     </i></span>
               </a>
@@ -273,7 +274,7 @@
       
       
 
-      <li class="dd-item  " data-nav-id="/projects/">
+      <li class="dd-item active parent" data-nav-id="/projects/">
         <a href="/projects/">
           <span>
             
@@ -312,86 +313,115 @@
                       </a>
                   </span>
                 
-                <span id="toc-menu"><a href=""><i class="fa fa-list-alt"></i></a></span>
-                
                 
                   
                   
                   
                     
                     
-                <a href="/basics/" itemprop="url"><span itemprop="title">Getting Started</span></a> <i class="fa fa-angle-right"></i>
-                    
                   
                 
-                <span itemprop="title"> Variables</span>
+                <span itemprop="title"> Projects</span>
               </div>
-              
-                  <div class="progress">
-    <div class="wrapper">
-<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#variables">Variables</a></li>
-<li><a href="#question">Question</a></li>
-</ul></li>
-</ul></li>
-</ul>
-</nav>
-    </div>
-</div>
-
               
             </div>
 
             </div>
             
+              <div id="chapter">
+            
               <div id="body-inner">
                 
-                <h1>Variables</h1>
-                
 
 
 
-<h3 id="variables">Variables</h3>
+<h1 id="projects">Projects</h1>
 
-<p>Sometimes, it is necessary to hold result of computation and to reuse it in future.</p>
+<p>See the folder: <code>Projects</code></p>
 
-<p>For example, to compute \[(1+2+3+\cdots+10)+(1+2+3+\cdots+10)^2+(1+2+3+\cdots+10)^3\]</p>
+<h2 id="project-1-shoelace-s-formula">Project 1: Shoelace&rsquo;s formula</h2>
 
-<ol>
-<li>Store the result of $(1+2+3+\cdots+10)$ to a variable <code>N</code>.</li>
-<li>Compute the result of $$N+N^2+N^3$$.</li>
-</ol>
+<p>Previously, our representation of a triangle is by three numbers (length of its sides). This is a valid representation because of the SSS congruence classification of triangle, i.e. every triangle of the same length of sides has the same geometric properties (including area, perimeter).
+The only possible differences are : positions of the triangles, orientations (whether it is a mirror image)</p>
 
-<pre><code class="language-python">N = 1+2+3+4+5+6+7+8+9+10
-N + N^2 + N^3
-</code></pre>
+<p>However, we cannot do so for a polygon with more than three sides. For example, a square is not always the same as a rhombus as they can have different interior angle.</p>
 
-<p><strong>We use the operator <code>=</code> for storing (assignment)</strong>,</p>
+<p>It turns out we can represent a convex polygon by a sequence of points (coordinates of its vertices).</p>
 
-<p>i.e. to store the result of right-hand-side to the variable on the left.</p>
+<p>For example, a triangle with vertices $A(0,0)$, $B(2,2)$ and $C(0,10)$ has area $\frac{2\times 10}{2}$.</p>
 
-<p><em>When an assignment is used, the result is suppressed.</em></p>
-
-<h3 id="question">Question</h3>
+<h4 id="task">Task:</h4>
 
 <ol>
-<li>What is the result of $$x+x^2+x^3$$?</li>
-<li>What is the result of the following code?</li>
+<li>Describe two completely different polygons with 5 equal sides.</li>
+<li>Write a function that takes three sides of a triangle and returns the area of the triangle.</li>
+<li>Write a function that takes three vertices (in coordinates) of a triangle and returns its area.</li>
+<li>Write a function that takes four vertices (in coordinates) of a quadrilateral and returns its area.</li>
+<li>Write a function that takes $n$ vertices (in coordinates) of a polygon and returns its area.</li>
 </ol>
 
-<pre><code class="language-python">a = 10
-a = a^2
-a = a^2
-show(a)
+<h4 id="links">Links:</h4>
+
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Shoelace_formula">https://en.wikipedia.org/wiki/Shoelace_formula</a></li>
+</ul>
+
+<hr />
+
+<h2 id="project-2-divisibility-and-recurring-decimals">Project 2: Divisibility and recurring decimals</h2>
+
+<p>In sage, you can write mathematical expressions by starting with the descriptor: <code>%md</code></p>
+
+
+<figure >
+    
+        <img src="/media/markdown.png" />
+    
+    
+    <figcaption>
+        <h4>Markdown and Maths</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<ol>
+<li>Click the small arrow on line number 1 to read the source code.</li>
+<li>Notice the usage of the pair of dollar symbols for math typesettings.</li>
+</ol>
+
+<h3 id="tasks">Tasks</h3>
+
+<p>Type your answer using Markdown and LaTeX, and also with the help of Sage.</p>
+
+<p>For the usage or list of mathematical symbols, you can refer to HostMath or detexify (<a href="http://detexify.kirelabs.org/classify.html">http://detexify.kirelabs.org/classify.html</a>).</p>
+
+<ol>
+<li>Show that divisiblity of 37 can be checked by 3-digit group sum.</li>
+<li>Find the period of the recurring decimal of:
+
+<ul>
+<li>$\frac{1}{101}$</li>
+<li>$\frac{1}{123}$</li>
+<li>$\frac{1}{1371}$</li>
+</ul></li>
+<li>Let $n$ be a positive integer. On a paper, copy it twice. For example, if $n$ is 123, then your paper has the number 123123.
+
+<ul>
+<li>Find a $n$ such that the number on the paper is a perfect square.</li>
+<li>Find the smallest such $n$. <em>Remember to explain your $n$ is the smallest.</em></li>
+</ul></li>
+</ol>
+
+<pre><code class="language-python">def duplicate(n):
+  return ZZ(str(n)*2)
 </code></pre>
 
 
       
+      
+        </div> 
       
       </div>
     </div>
@@ -472,30 +502,28 @@ show(a)
           
         
           
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
             
               
-                <a class="nav nav-prev" href="/basics/sage_arithmetic/"> <i class="fa fa-chevron-left"></i></a>
+                <a class="nav nav-prev" href="/sequences/"> <i class="fa fa-chevron-left"></i></a>
               
             
             
               
-                <a class="nav nav-next" href="/basics/sage_functions/" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
-              
             
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
           
         
         
@@ -534,4 +562,5 @@ show(a)
 
   </body>
 </html>
+
 

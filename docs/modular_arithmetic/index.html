@@ -79,7 +79,21 @@
             
           
         
+          
+          
+            
+          
         
+          
+          
+            
+          
+        
+        
+        
+          
+        
+          
         
           
         
@@ -163,6 +177,12 @@
               </a>
             </li>
           
+            <li class="dd-item " data-nav-id="/basics/sage_functions/">
+              <a href="/basics/sage_functions/">
+                <span>Functions     </i></span>
+              </a>
+            </li>
+          
             <li class="dd-item " data-nav-id="/basics/sage_lists/">
               <a href="/basics/sage_lists/">
                 <span>Lists     </i></span>
@@ -193,6 +213,74 @@
               <b>2. </b>
             
              Modular arithmetic
+            
+           </span>
+        </a>
+        
+        <ul>
+          
+            <li class="dd-item " data-nav-id="/modular_arithmetic/divisibility/">
+              <a href="/modular_arithmetic/divisibility/">
+                <span>Divisibility     </i></span>
+              </a>
+            </li>
+          
+            <li class="dd-item " data-nav-id="/modular_arithmetic/euclidean_algorithm/">
+              <a href="/modular_arithmetic/euclidean_algorithm/">
+                <span>Euclidean algorithm     </i></span>
+              </a>
+            </li>
+          
+        </ul>
+        
+      </li>
+      
+      
+      
+
+      
+      
+      
+        
+          
+        
+      
+      
+      
+
+      <li class="dd-item  " data-nav-id="/sequences/">
+        <a href="/sequences/">
+          <span>
+            
+              <b>3. </b>
+            
+             Sequences
+            
+           </span>
+        </a>
+        
+      </li>
+      
+      
+      
+
+      
+      
+      
+        
+          
+        
+      
+      
+      
+
+      <li class="dd-item  " data-nav-id="/projects/">
+        <a href="/projects/">
+          <span>
+            
+              <b></b>
+            
+             Projects
             
            </span>
         </a>
@@ -267,7 +355,11 @@
 
 <h2 id="integer-modular-ring">Integer Modular Ring</h2>
 
-<p>One can answer the above question in sage with modular ring:</p>
+<p>A clock arithmetic system of $n$ elements is denoted $Z_n$.</p>
+
+<p>It is called the integer modular ring of $n$ elements.</p>
+
+<p>One can answer the above three questions in sage with modular ring:</p>
 
 <pre><code class="language-python">clock = Integers(24) # Clock arithmetic system with 24 numbers
 T = clock(11)  # T stores the clock hour 11
@@ -276,11 +368,22 @@ T + 50 # The hour 50 hours later
 T + 2*13 # The hour after two single trips.
 </code></pre>
 
+<p><em>Another way to specify an element from a given modular arithmetic system is <code>Mod(number, base)</code></em></p>
+
+<pre><code class="language-python">T = Mod(11,24)  # The number 11 of the 24-hour clock.
+</code></pre>
+
 <h2 id="solving-modular-equation">Solving modular equation</h2>
+
+<p>Mathematically, in question 4, we are solving an equation of the form:
+$$3 + 7x \equiv 12 \pmod{24}$$</p>
+
+<p>The above notation explicitly states that one is solving the equation using clock arithmetic.</p>
 
 <p><code>solve_mod(equation, base, symbol)</code> returns all possible solutions.</p>
 
-<pre><code class="language-python">solve_mod(3 + 7*x == 12, 24, x)
+<pre><code class="language-python">var(&quot;x&quot;) # Make sure x is an unknown symbol
+solve_mod(3 + 7*x == 12, 24, x)
 </code></pre>
 
 
@@ -301,6 +404,10 @@ T + 2*13 # The hour after two single trips.
       
         
       
+        
+      
+        
+      
       
     
     
@@ -323,6 +430,22 @@ T + 2*13 # The hour after two single trips.
         
       
         
+      
+        
+      
+    
+      
+        
+      
+      
+        
+      
+        
+      
+    
+      
+        
+      
       
     
       
@@ -351,6 +474,8 @@ T + 2*13 # The hour after two single trips.
           
         
           
+        
+          
             
               
                 <a class="nav nav-prev" href="/basics/sage_lists/"> <i class="fa fa-chevron-left"></i></a>
@@ -358,7 +483,17 @@ T + 2*13 # The hour after two single trips.
             
             
               
+                <a class="nav nav-next" href="/modular_arithmetic/divisibility/" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+              
             
+          
+        
+          
+        
+          
+        
+          
+        
           
         
         
@@ -386,7 +521,8 @@ T + 2*13 # The hour after two single trips.
     document.body,
     {
       delimiters:[
-        {left: "$$", right: "$$", display: false },
+        {left: "$$", right: "$$", display: true },
+        {left: "$", right: "$", display: false },
         {left: "\\[", right: "\\]", display: true },
       ]
     }
